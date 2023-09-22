@@ -8,7 +8,7 @@ class Registration extends Component {
       email: "",
       phone: "",
       password: "",
-      registrationMessage: "", // Повідомлення про результат реєстрації
+      registrationMessage: "", 
     };
   }
 
@@ -21,7 +21,7 @@ class Registration extends Component {
     event.preventDefault();
     const { email, phone, password } = this.state;
 
-    // Створіть об'єкт з даними для відправки
+    
     const userData = {
       email,
       phone,
@@ -29,26 +29,26 @@ class Registration extends Component {
     };
 
     try {
-      // Відправка POST-запиту на сервер
+      
       const response = await axios.post("http://localhost:3001/register", userData);
 
-      // Логіка обробки успішної відповіді від сервера
+      
       console.log("Відповідь від сервера:", response.data);
 
-      // Очистіть поля після відправки даних
+      
       this.setState({
         email: "",
         phone: "",
         password: "",
-        registrationMessage: "Реєстрація пройшла успішно", // Повідомлення про успіх
+        registrationMessage: "Реєстрація пройшла успішно", 
       });
     } catch (error) {
-      // Логіка обробки помилки
+      
       console.error("Помилка при відправці даних на сервер:", error);
 
-      // Встановіть повідомлення про помилку
+      
       this.setState({
-        registrationMessage: "Помилка при реєстрації. Спробуйте ще раз.", // Повідомлення про помилку
+        registrationMessage: "Помилка при реєстрації. Спробуйте ще раз.", 
       });
     }
   };
