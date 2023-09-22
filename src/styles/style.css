@@ -1,0 +1,56 @@
+/* Стилі для центрування заголовка сторінки */
+.page-header {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  /* Стилі для центрування зображення */
+  .image-container {
+    text-align: center;
+  }
+
+  /* Стилі для контейнера кнопок та навігаційних крапочок */
+  .button-container,
+  .navigationDots {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  /* Стилі для кнопок */
+  .button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Стилі для навігаційних крапочок */
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  /* Респонсивність для збільшення відступів на малих екранах */
+  @media (max-width: 768px) {
+    .page-header,
+    .image-container,
+    .button-container,
+    .navigationDots {
+      padding: 10px 0;
+    }
+
+    /* Збільшимо розмір крапочок на малих екранах */
+    .dot {
+      width: 12px;
+      height: 12px;
+      margin: 0 7px;
+    }
+  }
